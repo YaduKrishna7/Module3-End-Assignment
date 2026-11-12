@@ -1,0 +1,53 @@
+{% extends 'myapp/base.html' %}
+{% block title %}{{ resume.name }} - Resume{% endblock %}
+{% block content %}
+
+<div class="resume-container">
+
+    <!-- Personal Information -->
+    <section class="profile">
+        <h2>
+            {% if resume.gender == 'Male' %}
+                👨
+            {% elif resume.gender == 'Female' %}
+                👩
+            {% else %}
+                🧑
+            {% endif %}
+
+            {{ resume.name }}
+        </h2>
+
+        <p><strong>Age:</strong> {{ resume.age }}</p>
+        <p><strong>Gender:</strong> {{ resume.gender }}</p>
+        <p><strong>Email:</strong> {{ resume.email }}</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section>
+        <h2>My Skills</h2>
+
+        <ul>
+            {% for skill in resume.skills %}
+                <li>{{ skill }}</li>
+            {% empty %}
+                <li>No skills available.</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <!-- Education Section -->
+    <section>
+        <h2>Education</h2>
+
+        {% for key, value in resume.education.items %}
+            <p>
+                <strong>{{ key|title }}:</strong> {{ value }}
+            </p>
+        {% endfor %}
+
+    </section>
+
+</div>
+
+{% endblock %}

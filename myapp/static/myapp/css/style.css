@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #0f172a, #2563eb);
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+/* Resume container */
+.resume-container {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 35px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Sections */
+section {
+    margin-bottom: 30px;
+}
+
+section h2 {
+    color: #2563eb;
+    font-size: 22px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 8px;
+}
+
+/* Profile */
+.profile {
+    text-align: center;
+    padding: 20px;
+    background: #eff6ff;
+    border-radius: 12px;
+}
+
+.profile h2 {
+    font-size: 28px;
+    color: #0f172a;
+    border: none;
+}
+
+.profile p {
+    margin: 8px 0;
+}
+
+/* Skills */
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    list-style: none;
+}
+
+ul li {
+    background: #dbeafe;
+    color: #1d4ed8;
+    padding: 9px 18px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+/* Education */
+section p {
+    margin: 12px 0;
+}
+
+/* Footer */
+footer {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .resume-container {
+        margin: 20px 12px;
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    .profile h2 {
+        font-size: 23px;
+    }
+}
